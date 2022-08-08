@@ -51,4 +51,5 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+// test
 
