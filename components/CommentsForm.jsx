@@ -53,7 +53,7 @@ const CommentsForm = ({slug}) => {
   }
 
   return (
-    <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
+    <div className='post-card-bg shadow-lg rounded-lg p-8 pb-12 mb-8'>
         <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
         Leave a Comment
         </h3>
@@ -86,7 +86,7 @@ const CommentsForm = ({slug}) => {
         <div className='mt-8'>
           <button 
             type='button' onClick={handleCommentSubmission}
-            className='transition duration-100 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 cursor-pointer'
+            className='transition duration-100 ease div_hover inline-block bg-gray-700 text-lg rounded-full text-white px-8 py-3 cursor-pointer'
             >
           Post Comment
           </button>
