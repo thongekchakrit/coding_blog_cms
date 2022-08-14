@@ -254,3 +254,22 @@ export const getRecentPosts = async () => {
 
   return result.posts;
 };
+
+
+export const getProfileCard = async () => {
+  const query = gql`
+  query MyQuery {
+    author(where: {id: "cl5e22zqmhvsk0ak62t72j3jw"}) {
+      bio
+      name
+      photo {
+        url
+      }
+    }
+  }
+  
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result;
+};
