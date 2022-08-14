@@ -45,5 +45,6 @@ const PostWidget = ({ categories, slug }) => {
     </div>
   )
 }
+//test
 
 export default PostWidget
