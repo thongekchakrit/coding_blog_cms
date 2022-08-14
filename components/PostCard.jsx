@@ -15,11 +15,10 @@ const PostCard = ({ post }) => {
         />
 
       </div>
-      <div className='font-small text-gray-500 text-center mb-6 mt-6'>
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 16 16" stroke="currentColor">
-      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-        </svg>
-        <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
+      <div className='font-medium text-color-white text-center mb-6'>
+        <span>
+            {moment(post.createdAt).format('MMM DD, YYYY')}
+        </span>
         </div>
       <h1 className='text-center text-white mb-5 text-2xl font-semibold'>
       {post.title}
