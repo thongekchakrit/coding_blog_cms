@@ -1,5 +1,4 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
 
 const AboutMe = () => {
 
@@ -7,7 +6,7 @@ const AboutMe = () => {
 
 <div className="post-card-bg w-full rounded-lg mb-8">
     <div className="flex flex-col items-center pb-10 ">
-        <Image className="mb-3 w-24 h-24 rounded-full shadow-lg mt-8" src="/Chakrit ThongEk.png" alt="Chakrit Thong Ek Image" />
+        <img className="mb-3 w-24 h-24 rounded-full shadow-lg mt-8" src="/Chakrit ThongEk.png" alt="Chakrit Thong Ek Image" />
         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Chakrit Thong Ek</h5>
         <span className="text-sm text-gray-500 dark:text-gray-400">Data Engineer / Web 3 Developer</span>
         <div className="mt-4 space-x-3 md:mt-6">
