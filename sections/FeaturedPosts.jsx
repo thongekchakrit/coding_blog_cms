@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 // import Carousel from 'react-multi-carousel';
-=======
-//import Carousel from 'react-multi-carousel';
->>>>>>> parent of d08ba39 (Revert "change font to poppin")
 // import 'react-multi-carousel/lib/styles.css';
 
 import { FeaturedPostCard } from '../components';
