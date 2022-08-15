@@ -31,13 +31,13 @@ const PostDetail = ({ post }) => {
  
     switch (type) {
       case 'heading-three':
-        return <h3 key={index} className="text-xl font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+        return <h3 key={index} className="text-xl font-semibold">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
-        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return <p key={index} className="mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
-        return <h4 key={index} className="text-md font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+        return <h4 key={index} className="text-md font-semibold">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'code-block':
-        return (<pre className='box-language-text mb-8'><code className='language-text mb-8'>{modifiedText}</code></pre>
+        return (<pre className='box-language-text'><code className='language-text'>{modifiedText}</code></pre>
           );
       case 'undefined':
         
@@ -56,7 +56,7 @@ const PostDetail = ({ post }) => {
             height={obj.height}
             width={obj.width}
             src={obj.src}
-            className="image-center mb-8"
+            className="image-center"
           />
         );
       default:

@@ -6,8 +6,8 @@ const PostCard = ({ post }) => {
 
   return (
     <a href={`/post/${post.slug}`} >
-    <div className='post-card-bg shadow-lg rounded-lg p-0 lg:p-8 pb-8 mb-8 div_hover'>
-      <div className='relative overflow-hidden shadow-md pb-80 mb-8' >
+    <div className='post-card-bg shadow-lg rounded-lg p-0 lg:p-5 pb-5 mb-5 div_hover '>
+      <div className='relative overflow-hidden shadow-md pb-80 mb-4 ' >
         <img 
           src = {post.featuredImage.url}
           alt= {post.title}
@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         />
 
       </div>
-      <div className='font-medium text-color-gray text-center mb-6'>
+      <div className='font-medium text-color-white text-center mb-6'>
         <span>
             {moment(post.createdAt).format('MMM DD, YYYY')}
         </span>
@@ -35,7 +35,7 @@ const PostCard = ({ post }) => {
               <p className='inline align-middle text-color-white ml-2 text-lg'>{post.author.name}</p>
           </div>
       </div> */}
-      <p className='relative overflow-hidden text-center text-lg text-color-white font-normal px-8 lg:px-8 mb-8'> {post.excerpt}</p>
+      <p className='relative overflow-hidden text-center text-lg text-color-white font-normal px-4 lg:px-10 mb-8'> {post.excerpt}</p>
       {/* <div className='text-center'>
         <Link href={`/post/${post.slug}`}>
           <span className='transition duration-100 transform hover:-translate-y-1 inline-block text-lg font-medium text-white px-8 py-3 cursor-pointer'>

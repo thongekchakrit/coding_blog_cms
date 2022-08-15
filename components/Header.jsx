@@ -15,7 +15,7 @@ const Header = () => {
 <div className='w-full inline-block py-4 border-gray-300 '>
             <div className='md:float-left block'> 
                 <Link href="/">
-                    <span className="cursor-pointer text-3xl text-color-header">
+                    <span className="cursor-pointer font-semibold text-2xl text-color-header">
                     💻 Chakrit's Coding Room
                     </span>
                 </Link>
