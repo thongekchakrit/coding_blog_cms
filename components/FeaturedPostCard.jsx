@@ -17,11 +17,11 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className='post-card-bg shadow-lg rounded-lg p-8 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
+      <h3 className='text-xl mb-8 font-semibold border-b pb-8'>
         {"Featured Posts"}
       </h3>
       {featuredPosts.map((post) => (
-        <div key={post.title} className='flex items-center w-full mb-4'>
+        <div key={post.title} className='flex items-center w-full mb-8'>
           {/* <div className='w-16 flex-none'>
             <img 
               alt={post.title}
