@@ -4,17 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-family: "Poppins";
+  font-weight: 300;
   font-style: normal;
+  font-size: normal;
   color: #f8f9fa;
   overflow-x: hidden;
   justify-content: center;
+  background : #1f1d2b;
+  line-height: 40px;
   &:before{
     content:'';
     content: "";
@@ -30,6 +34,7 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #1f1d2b;
   }
 }
 
@@ -57,16 +62,30 @@ header{
   background-color: #292e3c;
 }
 
+.text-description {
+  font-family: "Poppins";
+  font-weight: 100;
+  color: #888484;
+}
+
 .text-color-header{
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-family: "Poppins";
+  font-weight: 600;
   font-style: normal;
+  font-size: normal;
   color: #f8f9fa;
 }
 
 .text-color-white{
   color: #f8f9fa;
-  font-size:medium
+  font-size:small;
+  font-weight: bolder;
+}
+
+.text-color-gray{
+  color: #a0aec0;
+  font-size:small;
+  font-weight: thin;
 }
 
 .react-multi-carousel-list {
@@ -93,13 +112,13 @@ header{
   zoom: 1;
   border-radius: 5px;
   overflow-x: auto;
-  margin-bottom: 15px
+  margin-bottom: 30px
 }
 
 .language-text {
-  font-family: Liberation 'Courier New', Courier, monospace;
+  font-family: "Poppins";
   font-weight: normal;
-  font-size: 13px;
+  font-size: small;
   font-style: normal;
 }
 
