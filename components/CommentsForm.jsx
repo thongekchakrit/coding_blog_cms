@@ -78,7 +78,7 @@ const CommentsForm = ({slug}) => {
         <div className='grid grid-cols-1 gap-4 mb-4'>
             <div>
               <input ref={storeDataEl} type="checkbox" id="storeData" name="storeData" value="true"/>
-              <label className='text-gray-500 cursor-pointer ml-2'> Save my e-mail and name for next session</label>
+              <label className='text-color-gray cursor-pointer ml-2'> Save my e-mail and name for next session</label>
               
             </div>
         </div>
