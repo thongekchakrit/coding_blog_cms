@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         />
 
       </div>
-      <div className='font-medium text-color-gray text-center mb-6'>
+      <div className='text-color-gray text-center mb-6'>
         <span>
             {moment(post.createdAt).format('MMM DD, YYYY')}
         </span>
@@ -35,7 +35,7 @@ const PostCard = ({ post }) => {
               <p className='inline align-middle text-color-white ml-2 text-lg'>{post.author.name}</p>
           </div>
       </div> */}
-      <p className='relative overflow-hidden text-center text-lg text-color-white font-normal px-8 lg:px-8 mb-8'> {post.excerpt}</p>
+      <p className='relative overflow-hidden text-center text-lg text-color-white px-8 lg:px-8 mb-8'> {post.excerpt}</p>
       {/* <div className='text-center'>
         <Link href={`/post/${post.slug}`}>
           <span className='transition duration-100 transform hover:-translate-y-1 inline-block text-lg font-medium text-white px-8 py-3 cursor-pointer'>
