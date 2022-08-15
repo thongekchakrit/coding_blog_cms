@@ -4,13 +4,13 @@
 
 // @import "@fontsource/poppins"; 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-   font-family: 'Press Start 2P', cursive;
+  font-family: "Poppins";
   font-weight: 200;
   font-style: normal;
   font-size: small;
@@ -19,6 +19,7 @@ body {
   justify-content: center;
   background : #1f1d2b;
   line-height: 30px;
+  src: url('/fonts/Poppins.ttf');
   &:before{
     content:'';
     content: "";
@@ -64,12 +65,14 @@ header{
 
 .text-description {
   font-family: "Poppins";
+  src: url('/fonts/Poppins.ttf');
   font-weight: 200;
   color: #888484;
 }
 
 .text-color-header{
   font-family: "Poppins";
+  src: url('/fonts/Poppins.ttf');
   font-weight: 500;
   font-style: normal;
   font-size: normal;
@@ -116,6 +119,7 @@ header{
 .language-text {
   font-family: "Poppins";
   font-weight: normal;
+  src: url('/fonts/Poppins.ttf');
   font-size: small;
   font-style: normal;
 }
