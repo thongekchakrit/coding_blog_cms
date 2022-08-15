@@ -4,20 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import "@fontsource/poppins"; 
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: small;
   color: #f8f9fa;
   overflow-x: hidden;
   justify-content: center;
-  background : #1f1d2b;
   &:before{
     content:'';
     content: "";
@@ -33,7 +30,6 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #1f1d2b;
   }
 }
 
@@ -62,16 +58,15 @@ header{
 }
 
 .text-color-header{
-  font-family: "Poppins";
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: normal;
   color: #f8f9fa;
 }
 
 .text-color-white{
   color: #f8f9fa;
-  font-size:small
+  font-size:medium
 }
 
 .react-multi-carousel-list {
@@ -102,9 +97,9 @@ header{
 }
 
 .language-text {
-  font-family: "Poppins";
+  font-family: Liberation 'Courier New', Courier, monospace;
   font-weight: normal;
-  font-size: small;
+  font-size: 13px;
   font-style: normal;
 }
 
