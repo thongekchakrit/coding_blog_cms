@@ -28,11 +28,11 @@ export default function  Home({ posts }) {
       </Head>
       {/* <FeaturedPosts /> */}
       <div className='grid lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 gap-8'>
-        <div className="lg:col-span-3 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1  gap-8">
+        <div className="lg:col-span-3 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 grid grid-flow-row auto-rows-min">
           {posts.map((post) => <PostCard post={post.node} key={post.title}/>)}
         </div>
         <div className="lg:col-span-1 col-span-1">
-          <div className="lg:sticky relative top-5">
+          <div className="lg:sticky relative">
             <ProfileCard />
             <FeaturedPostCard />
             <PostWidget />
