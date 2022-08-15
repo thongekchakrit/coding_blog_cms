@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap");
+@import "@fontsource/poppins"; 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-// @import "@fontsource/poppins"; 
-
 
 html,
 body {
@@ -160,18 +157,3 @@ a:hover {
   right:0;
 }
 //force update
-
-/* Example file: styles.css */
-/* poppins-regular - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v15-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v15-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
-}
