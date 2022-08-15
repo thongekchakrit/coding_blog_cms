@@ -6,7 +6,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
 =======
 @import "@fontsource/poppins"; 
@@ -14,14 +13,11 @@
 =======
 @import "@fontsource/poppins"; 
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
-=======
->>>>>>> parent of 254fbce (change font to poppin)
 
 html,
 body {
   padding: 0;
   margin: 0;
-<<<<<<< HEAD
   font-family: "Poppins";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,14 +45,6 @@ body {
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
 =======
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
-=======
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #f8f9fa;
-  overflow-x: hidden;
-  justify-content: center;
->>>>>>> parent of 254fbce (change font to poppin)
   &:before{
     content:'';
     content: "";
@@ -72,6 +60,7 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #1f1d2b;
   }
 }
 
@@ -106,7 +95,6 @@ header{
 }
 
 .text-color-header{
-<<<<<<< HEAD
   font-family: "Poppins";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,18 +102,15 @@ header{
 =======
 =======
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
-=======
-  font-family: "Roboto", sans-serif;
->>>>>>> parent of 254fbce (change font to poppin)
   font-weight: normal;
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
   font-style: normal;
+  font-size: normal;
   color: #f8f9fa;
 }
 
 .text-color-white{
   color: #f8f9fa;
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   font-size:small;
@@ -142,9 +127,6 @@ header{
 =======
   font-size:small
 >>>>>>> parent of d08ba39 (Revert "change font to poppin")
-=======
-  font-size:medium
->>>>>>> parent of 254fbce (change font to poppin)
 }
 
 .react-multi-carousel-list {
@@ -175,9 +157,9 @@ header{
 }
 
 .language-text {
-  font-family: Liberation 'Courier New', Courier, monospace;
+  font-family: "Poppins";
   font-weight: normal;
-  font-size: 13px;
+  font-size: small;
   font-style: normal;
 }
 
