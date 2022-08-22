@@ -51,7 +51,7 @@ const PostDetail = ({ post }) => {
           null
         )
       case 'link':
-        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)} <a href={obj.href} target="_blank" style={{fontWeight : 'semibold', textDecoration: 'underline'}}>{obj.children[0].text}</a></p>
+        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)} <a href={obj.href} target="_blank" style={{fontWeight : 'bold', textDecoration: 'underline'}}>{obj.children[0].text}</a></p>
       case 'image':
         return (
           <img
