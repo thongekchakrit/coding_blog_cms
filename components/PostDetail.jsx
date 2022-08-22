@@ -1,18 +1,9 @@
 import React from 'react';
 import moment from 'moment';
+var counter = 0;
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
-
-    if (obj.type) {
-
-      console.log("Index: ", index)
-      console.log("Type: ", type)
-      console.log("Text: ", text)
-      console.log("Obj: ", obj)
-  
-
-    }
 
     if (obj.type == 'paragraph') {
       for (var i = 0; i < obj.children.length; i++) {
@@ -23,8 +14,8 @@ const PostDetail = ({ post }) => {
       }
     }
 
-    let modifiedText = text;
-
+    var modifiedText = text;
+    
     if (obj) {
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
@@ -38,7 +29,7 @@ const PostDetail = ({ post }) => {
         modifiedText = (<u key={index}>{text}</u>);
       }
     }
- 
+
     switch (type) {
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
@@ -56,15 +47,12 @@ const PostDetail = ({ post }) => {
         return (<pre className='box-language-text mb-8'><code className='language-text mb-8'>{modifiedText}</code></pre>
           );
       case 'undefined':
-        
         return (
           null
         )
       case 'link':
-        return (
-          <a href={obj.href} target="_blank">{obj.children[0].text}</a>
-        )
-        case 'image':
+        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)} <a href={obj.href} target="_blank" style={{fontWeight : 'semibold', textDecoration: 'underline'}}>{obj.children[0].text}</a></p>
+      case 'image':
         return (
           <img
             key={index}
@@ -76,6 +64,7 @@ const PostDetail = ({ post }) => {
           />
         );
       default:
+        counter += 1;
         return modifiedText;
     }
   };
