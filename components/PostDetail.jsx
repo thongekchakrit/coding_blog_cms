@@ -4,6 +4,16 @@ import moment from 'moment';
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
 
+    if (obj.type) {
+
+      console.log("Index: ", index)
+      console.log("Type: ", type)
+      console.log("Text: ", text)
+      console.log("Obj: ", obj)
+  
+
+    }
+
     if (obj.type == 'paragraph') {
       for (var i = 0; i < obj.children.length; i++) {
         if ('type' in obj.children[i] & 'href' in obj.children[i] ) {
@@ -30,12 +40,18 @@ const PostDetail = ({ post }) => {
     }
  
     switch (type) {
-      case 'heading-three':
-        return <h3 key={index} className="text-xl font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+      case 'heading-one':
+        return <h1 key={index} className="text-xl font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
+      case 'heading-two':
+        return <h2 key={index} className="text-xl font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+      case 'heading-three':
+        return <h3 key={index} className="text-xl font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+      case 'heading-five':
+        return <h5 key={index} className="text-md font-semibold mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
       case 'code-block':
         return (<pre className='box-language-text mb-8'><code className='language-text mb-8'>{modifiedText}</code></pre>
           );

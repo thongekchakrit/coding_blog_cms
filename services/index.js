@@ -4,34 +4,35 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getPosts = async () => {
   const query = gql`
-    query MyQuery {
-      postsConnection {
-        edges {
-          cursor
-          node {
-            author {
-              bio
-              name
-              id
-              photo {
-                url
-              }
-            }
-            createdAt
-            slug
-            title
-            excerpt
-            featuredImage {
+  query MyQuery {
+    postsConnection(orderBy: publishedAt_DESC) {
+      edges {
+        cursor
+        node {
+          author {
+            bio
+            name
+            id
+            photo {
               url
             }
-            categories {
-              name
-              slug
-            }
+          }
+          createdAt
+          slug
+          title
+          excerpt
+          featuredImage {
+            url
+          }
+          categories {
+            name
+            slug
           }
         }
       }
     }
+  }
+  
   `;
 
   const result = await request(graphqlAPI, query);
@@ -94,6 +95,7 @@ export const getSimilarPosts = async (categories, slug) => {
       posts(
         where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}}
         last: 3
+        orderBy: publishedAt_DESC
       ) {
         title
         featuredImage {
@@ -114,7 +116,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
     query GetAdjacentPosts($createdAt: DateTime!,$slug:String!) {
       next:posts(
         first: 1
-        orderBy: createdAt_ASC
+        orderBy: publishedAt_DESC
         where: {slug_not: $slug, AND: {createdAt_gte: $createdAt}}
       ) {
         title
@@ -126,7 +128,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
       }
       previous:posts(
         first: 1
-        orderBy: createdAt_DESC
+        orderBy: publishedAt_DESC
         where: {slug_not: $slug, AND: {createdAt_lte: $createdAt}}
       ) {
         title
@@ -184,7 +186,8 @@ export const getCategoryPost = async (slug) => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetCategoryPost() {
-      posts(where: {featuredPost: true}) {
+      posts(where: {featuredPost: true}
+            orderBy: publishedAt_DESC) {
         author {
           name
           photo {
@@ -238,7 +241,7 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_ASC
+        orderBy: publishedAt_DESC
         last: 3
       ) {
         title
